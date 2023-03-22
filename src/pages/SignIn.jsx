@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import OAuth from "../components/OAuth";
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -34,7 +35,7 @@ export default function SignIn() {
               value={email}
               onChange={onChange}
               placeholder="Email address"
-              className="mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out"
+              className="mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border-2 border-gray-300 rounded transition ease-in-out"
             />
             <div className="relative mb-6">
               <input
@@ -43,7 +44,7 @@ export default function SignIn() {
                 value={password}
                 onChange={onChange}
                 placeholder="Password"
-                className="w-full px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out"
+                className="w-full px-4 py-2 text-xl text-gray-700 bg-white border-2 border-gray-300 rounded transition ease-in-out"
               />
               {showPassword ? (
                 <AiFillEyeInvisible
@@ -85,6 +86,7 @@ export default function SignIn() {
             <div className="flex items-center  my-4 before:border-t before:flex-1 before:border-gray-300 after:border-t after:flex-1 after:border-gray-300">
               <p className="text-center font-semibold mx-4">OR</p>
             </div>
+            <OAuth />
           </form>
         </div>
       </div>
